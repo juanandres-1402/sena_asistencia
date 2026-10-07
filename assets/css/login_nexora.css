@@ -1,0 +1,641 @@
+/* =========================================================
+   PALETA INSTITUCIONAL SENA
+   ========================================================= */
+
+
+
+:root {
+
+    /* ==============================
+       COLORES INSTITUCIONALES SENA
+       ============================== */
+
+    --sena-green: #39A900;
+    --sena-green-dark: #007832;
+
+    --sena-blue: #00304D;
+    --sena-purple: #71277A;
+    --sena-cyan: #50E5F9;
+    --sena-yellow: #FDC300;
+
+
+    /* ==============================
+       FONDOS
+       ============================== */
+
+    --bg-dark: #0B1110;
+    --card-dark: #101817;
+    --input-bg: #17221F;
+
+    /* Bordes */
+    --border-dark: rgba(57, 169, 0, 0.20);
+    --border-focus: rgba(57, 169, 0, 0.60);
+
+
+    /* ==============================
+       TEXTOS
+       ============================== */
+
+    --text-white: #FFFFFF;
+    --text-light: #F6F6F6;
+    --text-muted: #A7B2AD;
+    --text-secondary: #7F8D87;
+
+
+    /* ==============================
+       BOTONES
+       ============================== */
+
+    --primary: #39A900;
+    --primary-hover: #007832;
+
+    --success: #39A900;
+}
+
+
+
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+/* =========================================================
+   PANEL IZQUIERDO
+   ========================================================= */
+
+.hero-panel {
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+
+/* =========================================================
+   VIDEO DE FONDO
+   ========================================================= */
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  z-index: 0;
+}
+
+
+/* =========================================================
+   CAPA SOBRE EL VIDEO
+   ========================================================= */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 48, 77, 0.20) 0%,
+      rgba(11, 17, 16, 0.75) 100%
+    );
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTENIDO
+   ========================================================= */
+
+.hero-content,
+.brand-header,
+.hero-footer {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================================
+   BORDE VERDE
+   ========================================================= */
+
+.border-green {
+  border-color: var(--sena-green) !important;
+}
+
+
+/* Tu HTML utiliza border-amber */
+.border-amber {
+  border-color: var(--sena-green) !important;
+}
+
+
+/* =========================================================
+   ICONO
+   ========================================================= */
+
+.icon-hexagon {
+  width: 52px;
+  height: 52px;
+
+  background-color: rgba(57, 169, 0, 0.08);
+
+  border: 1px solid rgba(57, 169, 0, 0.25);
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   PANEL DERECHO
+   ========================================================= */
+
+.form-panel {
+  background: linear-gradient(
+    135deg,
+    #000000 0%,
+    #001923 50%,
+    #00304D 100%
+  );
+}
+
+
+/* =========================================================
+   TARJETA LOGIN
+   ========================================================= */
+
+.login-card {
+  background: linear-gradient(
+    145deg,
+    #0A1115 0%,
+    #0D2533 100%
+  );
+
+  max-width: 440px;
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.50);
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+/* Línea verde superior */
+
+.login-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 12%;
+  right: 12%;
+
+  height: 3px;
+
+  background-color: var(--sena-green);
+
+  border-radius: 0 0 10px 10px;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.dark-input {
+  background-color: var(--input-bg);
+
+  border: 1px solid var(--border-dark);
+
+  border-radius: 10px !important;
+
+  overflow: hidden;
+
+  transition: all 0.25s ease;
+}
+
+
+/* Input seleccionado */
+
+.dark-input:focus-within {
+  border-color: var(--sena-green);
+
+  box-shadow:
+    0 0 0 1px var(--sena-green),
+    0 0 15px rgba(57, 169, 0, 0.10);
+}
+
+
+/* Input */
+
+.dark-input input {
+  color: var(--text-white) !important;
+
+  background-color: transparent !important;
+
+  box-shadow: none !important;
+}
+
+
+/* Placeholder */
+
+.dark-input input::placeholder {
+  color: #66736C;
+}
+
+
+/* Cuando se hace click */
+
+.dark-input input:focus {
+  box-shadow: none !important;
+}
+
+
+/* =========================================================
+   ICONOS DE LOS INPUTS
+   ========================================================= */
+
+.dark-input .input-group-text {
+  color: var(--text-secondary) !important;
+
+  transition: color 0.2s ease;
+}
+
+
+.dark-input:focus-within .input-group-text {
+  color: var(--sena-green) !important;
+}
+
+
+/* =========================================================
+   BOTÓN LOGIN
+   ========================================================= */
+
+.btn-green {
+  background-color: var(--sena-green);
+
+  color: #FFFFFF;
+
+  border: none;
+
+  border-radius: 10px;
+
+  transition: all 0.25s ease;
+}
+
+
+.btn-green:hover {
+  background-color: var(--sena-green-dark);
+
+  color: #FFFFFF;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 20px rgba(57, 169, 0, 0.20);
+}
+
+
+/* =========================================================
+   TU HTML USA btn-amber
+   ========================================================= */
+
+.btn-amber {
+  background-color: var(--sena-green) !important;
+
+  color: #FFFFFF !important;
+
+  border: none;
+
+  border-radius: 10px;
+
+  transition: all 0.25s ease;
+}
+
+
+.btn-amber:hover {
+  background-color: var(--sena-green-dark) !important;
+
+  color: #FFFFFF !important;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 20px rgba(57, 169, 0, 0.20);
+}
+
+
+.btn-amber:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   ENLACES VERDES
+   ========================================================= */
+
+.text-green {
+  color: var(--sena-green) !important;
+}
+
+
+.text-amber {
+  color: var(--sena-green) !important;
+
+  transition: color 0.2s ease;
+}
+
+
+.text-amber:hover {
+  color: var(--sena-yellow) !important;
+}
+
+
+/* =========================================================
+   TEXTOS PERSONALIZADOS
+   ========================================================= */
+
+.text-muted-custom {
+  color: var(--text-muted) !important;
+}
+
+
+.text-light-custom {
+  color: var(--text-light) !important;
+}
+
+
+.text-secondary-custom {
+  color: var(--text-secondary) !important;
+}
+
+
+/* =========================================================
+   BOTONES SOCIALES
+   ========================================================= */
+
+.btn-social {
+  width: 44px;
+  height: 44px;
+
+  background-color: var(--input-bg);
+
+  border: 1px solid var(--border-dark);
+
+  transition: all 0.2s ease;
+}
+
+
+.btn-social:hover {
+  background-color: rgba(57, 169, 0, 0.08);
+
+  border-color: var(--border-green);
+}
+
+
+/* =========================================================
+   BOTÓN MOSTRAR PASSWORD
+   ========================================================= */
+
+.role-button {
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+
+.role-button:hover {
+  color: var(--sena-green) !important;
+}
+
+
+/* =========================================================
+   DIVISOR
+   ========================================================= */
+
+.divider-text {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background-color: var(--card-dark);
+}
+
+
+/* =========================================================
+   ESPACIADO DE TEXTO
+   ========================================================= */
+
+.tracking-wider {
+  letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+  .hero-panel {
+    min-height: 350px;
+  }
+
+  .form-panel {
+    min-height: auto;
+  }
+
+}
+
+
+@media (max-width: 575px) {
+
+  .hero-panel {
+    min-height: 280px;
+  }
+
+  .login-card {
+    border-radius: 15px;
+  }
+
+}
+
+<style>
+  :root {
+    --card-bg: #ffffff;
+    --input-bg: #ffffff;
+    --input-border: #d9e2d8;
+    --btn-primary-bg: #39A900;
+    --btn-primary-text: #ffffff;
+    --text-muted-custom: #5f6f64;
+
+    --sena-blue: #00304D;
+    --sena-green: #39A900;
+    --sena-dark-green: #007832;
+    --sena-light: #F4F7F3;
+  }
+
+  body {
+    background: var(--sena-light);
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                 'Segoe UI', Roboto, sans-serif;
+    color: #1f2d25;
+    margin: 0;
+  }
+
+  nav,
+  .navbar {
+    display: none !important;
+  }
+
+  .form-card {
+    background: var(--card-bg);
+    border: 1px solid #e1e8df;
+    border-radius: 28px;
+    padding: 3rem 3.5rem;
+    width: 100%;
+    max-width: 680px;
+
+    box-shadow:
+      0 10px 30px rgba(0, 48, 77, 0.08);
+  }
+
+  .brand-logo-sena {
+    width: 70px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.25rem;
+    color: var(--sena-blue);
+  }
+
+  .form-subtitle {
+    color: var(--text-muted-custom);
+    font-size: 0.9rem;
+    margin-bottom: 2.2rem;
+  }
+
+  .question-label {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--sena-blue);
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+
+  .input-custom {
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: 10px;
+    color: #26352c;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.9rem;
+
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .input-custom:hover {
+    border-color: #aebdad;
+  }
+
+  .input-custom:focus {
+    background-color: #ffffff;
+    border-color: var(--sena-green);
+    color: #26352c;
+
+    box-shadow:
+      0 0 0 0.2rem rgba(57, 169, 0, 0.12);
+  }
+
+  .input-custom::placeholder {
+    color: #8b978e;
+  }
+
+  .input-custom option {
+    background-color: #ffffff;
+    color: #26352c;
+  }
+
+  .btn-generate {
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+
+    border: none;
+    border-radius: 12px;
+
+    padding: 0.9rem;
+
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+
+    transition:
+      background-color 0.2s ease,
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .btn-generate:hover {
+    background-color: var(--sena-dark-green);
+    color: #ffffff;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+      0 6px 15px rgba(57, 169, 0, 0.20);
+  }
+
+  .btn-generate:active {
+    transform: translateY(0);
+  }
+
+  textarea.input-custom {
+    resize: vertical;
+  }
+
+  select.input-custom {
+    cursor: pointer;
+  }
+
+  /* Adaptación para pantallas pequeñas */
+  @media (max-width: 768px) {
+
+    .form-card {
+      padding: 2rem 1.5rem;
+      border-radius: 20px;
+      margin: 1rem;
+    }
+
+    .form-title {
+      font-size: 1.3rem;
+    }
+
+    .form-subtitle {
+      margin-bottom: 1.5rem;
+    }
+  }
+</style>

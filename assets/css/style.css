@@ -1,0 +1,150 @@
+/* =======================================================================
+   style.css
+   Paleta institucional del SENA:
+     - Verde institucional:  #39A900
+     - Verde oscuro:         #1A6600
+     - Blanco:               #FFFFFF
+     - Gris claro:           #F5F6F7
+     - Gris oscuro:          #4B4B4B
+   ======================================================================= */
+
+:root {
+    --sena-verde: #39A900;
+    --sena-verde-oscuro: #1A6600;
+    --sena-blanco: #FFFFFF;
+    --sena-gris-claro: #F5F6F7;
+    --sena-gris-oscuro: #4B4B4B;
+}
+
+body {
+    background-color: var(--sena-gris-claro);
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--sena-gris-oscuro);
+
+}
+/*===============================login========================= */
+/* ========================================================= PANEL IZQUIERDO ========================================================= */ 
+.hero-panel { position: relative; background-image:
+ linear-gradient( 180deg, rgba(0, 48, 77, 0.35) 0%, rgba(11, 17, 16, 0.70) 100% ),
+  url('../img/fondo.png?auto=format&fit=crop&w=1000&q=80');
+   background-size: cover;
+
+     min-height: 100vh;
+     min-width: 60vh;
+      overflow: hidden; 
+  }
+
+.text-sena-verde-oscuro { color: var(--sena-verde-oscuro); }
+/* ========================================================= PANEL DERECHO ========================================================= */ 
+.m5{
+    
+}
+
+
+/* -------------------- Barra superior -------------------- */
+.sena-navbar {
+    background-color: var(--sena-verde-oscuro);
+    box-shadow: 0 2px 6px rgba(0,0,0,.15);
+}
+
+/* -------------------- Sidebar -------------------- */
+.sena-sidebar {
+    width: 250px;
+    min-height: calc(100vh - 56px);
+    background-color: var(--sena-blanco);
+    border-right: 1px solid #e3e5e8;
+}
+
+.sena-menu-item {
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+    padding: .65rem .9rem;
+    border-radius: .5rem;
+    color: var(--sena-gris-oscuro);
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: .15rem;
+    transition: background-color .15s ease, color .15s ease;
+}
+
+.sena-menu-item i { font-size: 1.05rem; color: var(--sena-verde); }
+
+.sena-menu-item:hover {
+    background-color: var(--sena-gris-claro);
+}
+
+.sena-menu-item.active {
+    background-color: var(--sena-verde);
+    color: #fff;
+}
+.sena-menu-item.active i { color: #fff; }
+
+.sena-contenido { min-height: calc(100vh - 56px); }
+
+/* -------------------- Tarjetas de indicadores (dashboard) -------------------- */
+.sena-card-indicador {
+    background: var(--sena-blanco);
+    border: none;
+    border-left: 5px solid var(--sena-verde);
+    border-radius: .6rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+
+.sena-card-indicador .valor { font-size: 1.9rem; font-weight: 700; color: var(--sena-verde-oscuro); }
+.sena-card-indicador .etiqueta { color: var(--sena-gris-oscuro); font-size: .85rem; }
+
+/* -------------------- Botones institucionales -------------------- */
+.btn-sena {
+    background-color: var(--sena-verde);
+    border-color: var(--sena-verde);
+    color: #fff;
+    font-weight: 600;
+}
+.btn-sena:hover { background-color: var(--sena-verde-oscuro); border-color: var(--sena-verde-oscuro); color: #fff; }
+
+.btn-sena-outline {
+    border: 1px solid var(--sena-verde);
+    color: var(--sena-verde-oscuro);
+    background: #fff;
+    font-weight: 600;
+}
+.btn-sena-outline:hover { background-color: var(--sena-verde); color: #fff; }
+
+/* -------------------- Pantalla de portería (control de ingreso) -------------------- */
+.porteria-panel {
+    max-width: 640px;
+    margin: 0 auto;
+}
+.porteria-panel input[type="text"] {
+    font-size: 1.4rem;
+    padding: .8rem 1rem;
+    text-align: center;
+}
+
+.estado-chip {
+    font-size: 1.1rem;
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+    display: inline-block;
+}
+
+/* -------------------- Login -------------------- */
+.login-wrapper {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--sena-verde-oscuro), var(--sena-verde));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-card {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+/* -------------------- Tablas responsive -------------------- */
+.table-responsive { border-radius: .5rem; overflow: hidden; }
+thead.sena-thead { background-color: var(--sena-verde-oscuro); color: #fff; }
